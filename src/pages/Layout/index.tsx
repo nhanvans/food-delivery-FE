@@ -1,5 +1,6 @@
 import React from 'react'
 import { ReactNode } from 'react'
+import Header from './Header'
 
 type Props = {
   children: ReactNode
@@ -10,7 +11,7 @@ const index = (props: Props) => {
 
   return (
     <>
-      <header>header</header>
+      <Header />
       <div>{children}</div>
       <footer>foodter</footer>
     </>
