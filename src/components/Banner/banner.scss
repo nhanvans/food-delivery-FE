@@ -1,0 +1,47 @@
+.banner-food {
+  height: 100vh;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  background-image: url('https://shopeefood.vn/app/assets/img/main-banner.jpg?45bff8c9ec408a5ba51f9fdef662324e');
+  background-size: cover;
+  overflow: hidden;
+
+  .container {
+    height: 100%;
+    position: relative;
+  }
+
+  .food-search {
+    color: #fff;
+    width: 470px;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    margin-top: -30px;
+
+    .title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .local {
+      font-size: 15px;
+      text-transform: capitalize;
+    }
+
+    .btn-category {
+        border-color: #fff;
+        color: #fff;
+    }
+    .btn-category:hover {
+        color: #000;
+        background-color: #fff;
+    }
+  }
+}

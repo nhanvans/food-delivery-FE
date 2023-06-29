@@ -24,28 +24,31 @@ const index = () => {
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='' style={{ width: '100%' }}>
             {/*me-auto*/}
-            <NavDropdown title='TP.HCM' id='basic-nav-dropdown' className='cityDropdown ms-5 me-5'>
+            <NavDropdown title='TP.HCM' id='basic-nav-dropdown' className='cityDropdown ms-3 me-3'>
               <NavDropdown.Item href=''>TP.HCM</NavDropdown.Item>
               <NavDropdown.Item href=''>Hà Nội</NavDropdown.Item>
               <NavDropdown.Item href=''>Đà Nẵng</NavDropdown.Item>
               <NavDropdown.Item href=''>Hải Phòng</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href='/'>Đồ ăn</Nav.Link>
-            <Nav.Link href='/'>Thực phẩm</Nav.Link>
-            <Nav.Link href='/'>Bia</Nav.Link>
-            <Nav.Link href='/'>Hoa</Nav.Link>
-            <Nav.Link href='/'>Siêu thị</Nav.Link>
-            <Nav.Link href='/'>Thuốc</Nav.Link>
-            <Nav.Link href='/'>Thú cưng</Nav.Link>
+            <Nav.Link href='/'>Nhà hàng</Nav.Link>
+            <Nav.Link href='/'>Đồ ăn nhanh</Nav.Link>
+            <Nav.Link href='/'>Món tráng miệng</Nav.Link>
+            <Nav.Link href='/'>Cà phê & Trà</Nav.Link>
+            <NavDropdown title='Xem thêm' id='basic-nav-dropdown'>
+              <NavDropdown.Item href='/'>Tiệm bánh</NavDropdown.Item>
+              <NavDropdown.Item href='/'>Quán bar & Quán rượu</NavDropdown.Item>
+              <NavDropdown.Item href='/'>Chợ đặc sản</NavDropdown.Item>
+              <NavDropdown.Item href='/'>Chỉ giao hàng</NavDropdown.Item>
+            </NavDropdown>
 
             <Button variant='default' className='btn-search'>
               <SearchOutlined style={{ fontSize: '23px', color: '#000', fontWeight: '700' }} />
             </Button>
-            <Button variant='outline-danger' className='ms-3 btn-login'>
+            <Button variant='outline-danger' className='ms-2 btn-login'>
               Đăng nhập
             </Button>
-            <NavDropdown title={<FlagVn width={30} height={30} />} id='basic-nav-dropdown' className='ms-3 me-0'>
-              <NavDropdown.Item href=''>
+            <NavDropdown title={<FlagVn width={30} height={30} />} id='basic-nav-dropdown' className='ms-2 me-0'>
+              <NavDropdown.Item href='' active={true}>
                 <FlagVn width={30} height={30} />
               </NavDropdown.Item>
               <NavDropdown.Item href=''>

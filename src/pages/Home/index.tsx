@@ -1,10 +1,16 @@
 import React from 'react'
 import Layout from '~/pages/Layout'
+import Banner from '~/components/Banner'
 
 const index = () => {
   return (
     <Layout>
-      <div>index</div>
+      <Banner
+        style={{
+          position: 'fixed',
+          top: '70px'
+        }}
+      />
     </Layout>
   )
 }
