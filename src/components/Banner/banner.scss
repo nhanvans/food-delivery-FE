@@ -1,13 +1,11 @@
 .banner-food {
   height: 100vh;
-  position: fixed;
-  top: 70px;
   left: 0;
   right: 0;
   z-index: 0;
   background-image: url('https://shopeefood.vn/app/assets/img/main-banner.jpg?45bff8c9ec408a5ba51f9fdef662324e');
   background-size: cover;
-  overflow: hidden;
+  // overflow: hidden;
 
   .container {
     height: 100%;
@@ -18,11 +16,14 @@
     color: #fff;
     width: 470px;
     z-index: 2;
-    position: absolute;
+    // position: absolute;
     top: 50%;
     left: 20px;
     transform: translateY(-50%);
-    margin-top: -30px;
+    // margin-top: -30px;
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
 
     .title {
       font-size: 24px;

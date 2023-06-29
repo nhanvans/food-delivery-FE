@@ -1,21 +1,23 @@
 import React from 'react'
 import { ReactNode } from 'react'
 import Header from './Header'
+import Footer from './Footer'
 
 type Props = {
   children: ReactNode
 }
 
-const index = (props: Props) => {
+const Layout = (props: Props) => {
   const { children } = props
 
   return (
     <>
       <Header />
-      <div>{children}</div>
-      <footer>foodter</footer>
+      <div className='content'>{children}</div>
+      <div style={{ clear: 'both' }}></div>
+      <Footer />
     </>
   )
 }
 
-export default index
+export default Layout
