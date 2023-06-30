@@ -13,8 +13,17 @@ const Layout = (props: Props) => {
   return (
     <>
       <Header />
-      <div className='content'>{children}</div>
-      <div style={{ clear: 'both' }}></div>
+      <div
+        className='content'
+        style={{
+          position: 'relative',
+          width: '100%',
+          clear: 'both'
+          // top: '70px'
+        }}
+      >
+        {children}
+      </div>
       <Footer />
     </>
   )

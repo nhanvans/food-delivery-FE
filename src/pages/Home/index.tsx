@@ -16,10 +16,12 @@ const Home = () => {
     <Layout>
       <Banner
         style={{
-          position: 'absolute',
+          // position: 'absolute',
           // top: '70px'
         }}
       />
+
+      <div>asdasd</div>
     </Layout>
   )
 }

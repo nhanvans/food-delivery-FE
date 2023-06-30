@@ -5,22 +5,17 @@
   z-index: 0;
   background-image: url('https://shopeefood.vn/app/assets/img/main-banner.jpg?45bff8c9ec408a5ba51f9fdef662324e');
   background-size: cover;
-  // overflow: hidden;
+  overflow: hidden;
 
   .container {
-    height: 100%;
-    position: relative;
+    // height: 100%;
   }
 
   .food-search {
     color: #fff;
     width: 470px;
     z-index: 2;
-    // position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-    // margin-top: -30px;
+    // transform: translateY(-50%);
     margin-top: 20%;
     margin-left: auto;
     margin-right: auto;
