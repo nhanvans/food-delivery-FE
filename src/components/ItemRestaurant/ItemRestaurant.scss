@@ -1,0 +1,22 @@
+.item-restaurant {
+  .name {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    font-size: 14px;
+    font-weight: 700;
+    color: #252525;
+    margin-bottom: 1px;
+    // padding-top: 5px;
+  }
+
+  .address {
+    font-size: 12px;
+    color: #959595;
+    
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}

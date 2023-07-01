@@ -18,7 +18,8 @@ const Layout = (props: Props) => {
         style={{
           position: 'relative',
           width: '100%',
-          clear: 'both'
+          clear: 'both',
+          marginTop: '60px' 
           // top: '70px'
         }}
       >
