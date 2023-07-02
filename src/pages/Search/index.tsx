@@ -3,6 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap'
 import Filter from '~/components/Filter'
 import ItemRestaurant from '~/components/ItemRestaurant'
 import Layout from '~/pages/Layout'
+import PaginationCus from '~/components/PaginationCus'
 
 import './Search.scss'
 
@@ -130,6 +131,10 @@ const Search = () => {
               <ItemRestaurant Item={item}></ItemRestaurant>
             </Col>
           ))}
+        </Row>
+
+        <Row className='pt-3'>
+          <PaginationCus classNamePagi='justify-content-center' />
         </Row>
       </Container>
     </Layout>
