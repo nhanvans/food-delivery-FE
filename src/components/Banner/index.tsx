@@ -52,7 +52,7 @@ const index = (props: Props) => {
               'Cơm hộp'
             ].map((item) => (
               <Button key={item} variant='outline-secondary' className='me-2 mb-1 mt-1 btn-category'>
-                <Nav.Link href='/'>{item}</Nav.Link>
+                <Nav.Link href='/search'>{item}</Nav.Link>
               </Button>
             ))}
           </div>
