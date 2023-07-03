@@ -207,8 +207,24 @@
 
         .item-restaurant-row {
           .item-restaurant-more {
-            .product-price{
-                
+            .product-price {
+              .sub-price {
+                font-weight: 400;
+                position: relative;
+                top: -9px;
+                font-size: 10px;
+                right: 0;
+              }
+              .old-price {
+                font-size: 13px;
+                text-decoration: line-through;
+                color: #6d6f71;
+              }
+              .current-price {
+                font-size: 16px;
+                font-weight: 700;
+                color: #0288d1;
+              }
             }
             .adding-food-cart {
               .btn-adding {

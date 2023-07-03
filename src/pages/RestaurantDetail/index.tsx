@@ -162,7 +162,14 @@ const RestaurantDetail = ({ key, ...props }: Props) => {
                         <Col className='col-auto item-restaurant-more'>
                           <Row>
                             <Col className='col-auto product-price'>
-                              <div className="old-price"></div>
+                              <div className='old-price'>
+                                107,000
+                                <span className='sub-price'>đ</span>
+                              </div>
+                              <div className='current-price'>
+                                77,000
+                                <span className='sub-price'>đ</span>
+                              </div>
                             </Col>
                             <Col className='col-auto adding-food-cart'>
                               <div className='btn-adding'>+</div>
