@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from '~/pages/Home'
 import Search from '~/pages/Search'
 import RestaurantDetail from '~/pages/RestaurantDetail'
+import LayoutAdmin from '~/admin/Layout'
 import './App.css'
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/search' element={<Search />} />
           <Route path='/detail' element={<RestaurantDetail />} />
+
+          <Route path='/admin' element={<LayoutAdmin />}/>
         </Routes>
       </BrowserRouter>
     </>
