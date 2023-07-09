@@ -1,17 +1,23 @@
-import React, { useState } from 'react'
+import React, { ReactNode, useState } from 'react'
 import {
+  CommentOutlined,
   MenuFoldOutlined,
   MenuUnfoldOutlined,
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined
+  MoneyCollectOutlined,
+  UserOutlined
 } from '@ant-design/icons'
 import { Layout, Menu, Button, theme } from 'antd'
 import logo from '~/assets/icon/react.svg'
 
+import './layout.scss'
+
 const { Header, Sider, Content } = Layout
 
-const LayoutAdmin: React.FC = () => {
+type Props = {
+  children: ReactNode
+}
+
+const LayoutAdmin = ({ children, ...probs }: Props) => {
   const [collapsed, setCollapsed] = useState(false)
   const {
     token: { colorBgContainer }
@@ -20,9 +26,9 @@ const LayoutAdmin: React.FC = () => {
   return (
     <Layout>
       <Sider trigger={null} collapsible collapsed={collapsed}>
-        <div className='demo-logo-vertical'>
+        <div className='admin-logo-food'>
           {' '}
-          <img src={logo} alt='logo' width='30' height='30' className='d-inline-block align-top' />
+          <img src={logo} alt='logo' />
         </div>
         <Menu
           theme='dark'
@@ -32,23 +38,32 @@ const LayoutAdmin: React.FC = () => {
             {
               key: '1',
               icon: <UserOutlined />,
-              label: 'nav 1'
+              label: 'Nhà hàng'
             },
             {
               key: '2',
-              icon: <VideoCameraOutlined />,
-              label: 'nav 2'
+              icon: <CommentOutlined />,
+              label: 'Bình luận'
             },
             {
               key: '3',
-              icon: <UploadOutlined />,
-              label: 'nav 3'
+              icon: <MoneyCollectOutlined />,
+              label: 'Ví'
             }
           ]}
         />
       </Sider>
       <Layout>
-        <Header style={{ padding: 0, background: colorBgContainer }}>
+        <Header
+          style={{
+            padding: 0,
+            background: colorBgContainer,
+            position: 'sticky',
+            top: '0',
+            zIndex: '1',
+            boxShadow: '0px 2px #e5e5e5'
+          }}
+        >
           <Button
             type='text'
             icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
@@ -68,7 +83,7 @@ const LayoutAdmin: React.FC = () => {
             background: colorBgContainer
           }}
         >
-          Content
+          {children}
         </Content>
       </Layout>
     </Layout>

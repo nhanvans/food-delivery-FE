@@ -3628,9 +3628,9 @@ rc-align@^4.0.0:
     resize-observer-polyfill "^1.5.1"
 
 rc-cascader@~3.12.0:
-  version "3.12.0"
-  resolved "https://registry.yarnpkg.com/rc-cascader/-/rc-cascader-3.12.0.tgz#709fdbede6c36f7e62d0daea76ba76b825cc7182"
-  integrity sha512-QTeGPTNYX33alozNy9lYg7YKpvYVwquai/mrFRR8mHlHnK7QlqJyMqbs2p7rc5eeKARKMRTUeoN5CfO+Gr9UBw==
+  version "3.12.1"
+  resolved "https://registry.yarnpkg.com/rc-cascader/-/rc-cascader-3.12.1.tgz#35f9db14a2d32a2a413801d4625cb61cdaa3f706"
+  integrity sha512-g6In2y6eudHXS/Fs9dKFhp9acvHRUPqem/7xReR9ng8M1pNAE137uGBOt9WNpgsKT/cDGudXZQVehaBwAKg6hQ==
   dependencies:
     "@babel/runtime" "^7.12.5"
     array-tree-filter "^2.1.0"

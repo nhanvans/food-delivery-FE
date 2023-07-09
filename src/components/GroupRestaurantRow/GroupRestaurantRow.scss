@@ -1,0 +1,90 @@
+.restaurant-group {
+  padding: 12px;
+  border: 1px solid rgba(35, 35, 35, 0.236);
+  .img-restaurant {
+    width: 180px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 13px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .group-btn{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    button {
+    }
+  }
+
+  .info-restaurant {
+    display: flex;
+    flex-direction: column;
+
+    .name {
+      font-size: 19px;
+      color: #464646;
+      font-weight: 700;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      margin-bottom: 4px;
+      line-height: 33px;
+    }
+
+    .cost-restaurant {
+      color: #959595;
+      font-size: 15px;
+
+      span {
+        text-align: center;
+        font-size: 15px;
+        width: 16px;
+        height: 16px;
+        line-height: 15px;
+        vertical-align: top;
+        margin-top: 3px;
+        margin-right: 3px;
+      }
+    }
+
+    .address {
+      font-size: 13px;
+      margin-bottom: 2px;
+    }
+
+    .rating {
+      margin-bottom: 4px;
+      font-size: 14px;
+      vertical-align: middle;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+
+      .stars {
+        font-size: 14px;
+        color: #ffc107;
+
+        span {
+          margin-right: 2px;
+          vertical-align: middle;
+        }
+      }
+
+      .number-rating {
+        background-color: #ffc107;
+        padding: 0 5px;
+        border-radius: 4px;
+        color: #fff;
+        margin: 0 5px;
+      }
+    }
+  }
+}

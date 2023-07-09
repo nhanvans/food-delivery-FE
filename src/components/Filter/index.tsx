@@ -15,7 +15,6 @@ type Props = {
 
 const Filter = ({ name, classNameBtn, ...props }: Props) => {
   const [show, setShow] = useState(false)
-  const [isShowMore, setShowMore] = useState(false)
 
   const handleClose = () => setShow(false)
   const toggleShow = () => setShow((s) => !s)

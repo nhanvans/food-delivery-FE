@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from '~/pages/Home'
 import Search from '~/pages/Search'
 import RestaurantDetail from '~/pages/RestaurantDetail'
-import LayoutAdmin from '~/admin/Layout'
+import FoodPlace from '~/admin/FoodPlace'
 import './App.css'
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
           <Route path='/search' element={<Search />} />
           <Route path='/detail' element={<RestaurantDetail />} />
 
-          <Route path='/admin' element={<LayoutAdmin />}/>
+          <Route path='/admin' element={<FoodPlace />} />
         </Routes>
       </BrowserRouter>
     </>
