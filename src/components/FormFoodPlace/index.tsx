@@ -1,7 +1,11 @@
 import React from 'react'
-import { Form } from 'react-bootstrap'
+import { Button, Form } from 'react-bootstrap'
 
-const FormFoodPlace = () => {
+type Props = {
+  name?: string
+}
+
+const FormFoodPlace = ({...probs} : Props) => {
   return (
     <Form>
       <Form.Group className='mb-3' controlId='exampleForm.ControlInput1'>
@@ -12,6 +16,9 @@ const FormFoodPlace = () => {
         <Form.Label>Example textarea</Form.Label>
         <Form.Control as='textarea' rows={3} />
       </Form.Group>
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
     </Form>
   )
 }

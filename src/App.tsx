@@ -18,6 +18,8 @@ function App() {
           <Route path='/detail' element={<RestaurantDetail />} />
 
           <Route path='/admin' element={<FoodPlace />} />
+          <Route path='/admin/food-place' element={<FoodPlace />} />
+          <Route path='/admin/food-place/form' element={<FoodPlace />} />
         </Routes>
       </BrowserRouter>
     </>
