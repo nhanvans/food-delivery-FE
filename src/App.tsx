@@ -19,7 +19,7 @@ function App() {
 
           <Route path='/admin' element={<FoodPlace />} />
           <Route path='/admin/food-place' element={<FoodPlace />} />
-          <Route path='/admin/food-place/form' element={<FoodPlace />} />
+          <Route path='/admin/food-place/create' element={<FoodPlace />} />
         </Routes>
       </BrowserRouter>
     </>
