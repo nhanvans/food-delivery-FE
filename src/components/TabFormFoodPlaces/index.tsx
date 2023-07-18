@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Row, Tab, Tabs } from 'react-bootstrap'
 import FormFoodPlace from '../FormFoodPlace'
+import FormFoodDetail from '../FormFoodDetail'
 
 type Props = {
   handleShowForm: () => void
@@ -9,12 +10,12 @@ type Props = {
 const TabFormFoodPlaces = ({ handleShowForm, ...probs }: Props) => {
   return (
     <>
-      <Tabs defaultActiveKey='profile' id='justify-tab-example' className='mb-3' justify>
-        <Tab eventKey='home' title='Home'>
+      <Tabs defaultActiveKey='foodBase' id='justify-tab-example' className='mb-3' justify>
+        <Tab eventKey='foodBase' title='Thông tin cơ bản'>
           <FormFoodPlace />
         </Tab>
-        <Tab eventKey='profile' title='Profile'>
-          <FormFoodPlace />
+        <Tab eventKey='detail' title='Thông tin chi tiết'>
+          <FormFoodDetail />
         </Tab>
         <Tab eventKey='longer-tab' title='Loooonger Tab'>
           <FormFoodPlace />
