@@ -2,6 +2,7 @@ import React from 'react'
 import { Button, Row, Tab, Tabs } from 'react-bootstrap'
 import FormFoodPlace from '../FormFoodPlace'
 import FormFoodDetail from '../FormFoodDetail'
+import FormFoodLocation from '../FormLocation'
 
 type Props = {
   handleShowForm: () => void
@@ -17,8 +18,8 @@ const TabFormFoodPlaces = ({ handleShowForm, ...probs }: Props) => {
         <Tab eventKey='detail' title='Thông tin chi tiết'>
           <FormFoodDetail />
         </Tab>
-        <Tab eventKey='longer-tab' title='Loooonger Tab'>
-          <FormFoodPlace />
+        <Tab eventKey='location' title='Vị trí địa lý'>
+          <FormFoodLocation />
         </Tab>
         <Tab eventKey='contact' title='Contact' disabled>
           Tab content for Contact

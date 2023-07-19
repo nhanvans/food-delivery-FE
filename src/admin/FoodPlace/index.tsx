@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Row } from 'react-bootstrap'
 import LayoutAdmin from '~/admin/Layout'
-import FormFoodPlace from '~/components/FormFoodPlace'
 import GroupRestaurantRow from '~/components/GroupRestaurantRow'
 import PaginationCus from '~/components/PaginationCus'
 import TabFormFoodPlaces from '~/components/TabFormFoodPlaces'
@@ -27,13 +26,12 @@ const FoodPlace = () => {
           <PaginationCus classNamePagi='justify-content-center' />
         </Row>
       </>
-      
     )
   }
 
   return (
     <LayoutAdmin>
-      { !isShowForm ? ListRestaurants(handleShowForm) : <TabFormFoodPlaces handleShowForm={handleShowForm} /> }
+      {!isShowForm ? ListRestaurants(handleShowForm) : <TabFormFoodPlaces handleShowForm={handleShowForm} />}
     </LayoutAdmin>
   )
 }

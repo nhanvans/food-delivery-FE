@@ -60,7 +60,7 @@ const LayoutAdmin = ({ children, ...probs }: Props) => {
             background: colorBgContainer,
             position: 'sticky',
             top: '0',
-            zIndex: '1',
+            zIndex: '10000',
             boxShadow: '0px 2px #e5e5e5'
           }}
         >
