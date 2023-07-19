@@ -190,6 +190,45 @@ const FormFoodDetail = () => {
           </Row>
         </ListGroup.Item>
       </ListGroup>
+
+      <Form.Group className='mb-3' controlId='foodPlaceForm.ControlInputStandFoods'>
+        <Form.Label>Phục vụ các món ăn</Form.Label>
+        <Form.Control type='text' placeholder='Vui lòng nhập các món ăn' />
+      </Form.Group>
+
+      <Row className='mb-3'>
+        <Form.Group as={Col} controlId='foodPlaceForm.ControlInputCapacity'>
+          <Form.Label>Sức chứa</Form.Label>
+          <Form.Control type='number' placeholder='Vui lòng nhập sức chứa' />
+        </Form.Group>
+
+        <Form.Group as={Col} controlId='foodPlaceForm.ControlInputLastAdmissionTime'>
+          <Form.Label>Giờ nhận khách cuối</Form.Label>
+          <Form.Control type='text' placeholder='Vui lòng nhập giờ nhận khách cuối' />
+        </Form.Group>
+
+        <Form.Group as={Col} controlId='foodPlaceForm.ControlInputPreparationTime'>
+          <Form.Label>Thời gian chuẩn bị</Form.Label>
+          <Form.Control type='text' placeholder='Vui lòng nhập thời gian chuẩn bị' />
+        </Form.Group>
+
+        <Form.Group as={Col} controlId='foodPlaceForm.ControlInputHoliday'>
+          <Form.Label>Nghỉ lễ</Form.Label>
+          <Form.Select aria-label='Default select holiday'>
+            <option>Open this select holiday</option>
+            {[
+              [
+                { type: 'all_holiday', name: 'Các ngày nghỉ trong năm' },
+                { type: 'no_holiday', name: 'Không nghỉ lễ' }
+              ].map((item) => (
+                <option value={item.type} key={item.type}>
+                  {item.name}
+                </option>
+              ))
+            ]}
+          </Form.Select>
+        </Form.Group>
+      </Row>
     </Form>
   )
 }
