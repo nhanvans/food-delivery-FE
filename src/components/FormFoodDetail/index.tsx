@@ -31,9 +31,9 @@ const FormFoodDetail = () => {
                 { type: 'shop_online', name: 'Shop online' },
                 { type: 'rice_office', name: 'Giao cơm văn phòng' },
                 { type: 'food_court', name: 'Khu ẩm thực' }
-              ].map((item) => (
-                <option value={item.type} key={item.type}>
-                  {item.name}
+              ].map((type, index) => (
+                <option value={type.type} key={index}>
+                  {type.name}
                 </option>
               ))
             ]}
@@ -49,11 +49,11 @@ const FormFoodDetail = () => {
                 { type: 'breakfast', name: 'Buổi sáng' },
                 { type: 'lunch', name: 'Buổi trưa' },
                 { type: 'afternoon', name: 'Buổi xế' },
-                { type: 'dinner', name: 'Buổi tối' },
+                { type: 'dinner_time', name: 'Buổi tối' },
                 { type: 'late_night', name: 'Buổi khuya' }
-              ].map((item) => (
-                <option value={item.type} key={item.type}>
-                  {item.name}
+              ].map((diningTimes) => (
+                <option value={diningTimes.type} key={diningTimes.type}>
+                  {diningTimes.name}
                 </option>
               ))
             ]}
@@ -66,14 +66,14 @@ const FormFoodDetail = () => {
             [
               { type: 'affordable', name: 'Bình dân' },
               { type: 'mid-range', name: 'Hạng trung' },
-              { type: 'luxury', name: 'Sang trọng' }
-            ].map((item) => (
+              { type: 'luxury-price', name: 'Sang trọng' }
+            ].map((price) => (
               <Form.Check // prettier-ignore
-                key={item.type}
+                key={price.type}
                 type='checkbox'
-                id={`${item.type}`}
-                label={`${item.name}`}
-                value={item.type}
+                id={`${price.type}`}
+                label={`${price.name}`}
+                value={price.type}
               />
             ))
           ]}
@@ -159,14 +159,14 @@ const FormFoodDetail = () => {
               { type: 'pub', name: 'Quán rượu' },
               { type: 'gastropub_specialties', name: 'Quán rượu đặc sản' },
               { type: 'guangdong', name: 'Quảng Đông' },
-              { type: 'bar', name: 'Quầy bar' },
+              { type: 'bar_culi', name: 'Quầy bar' },
               { type: 'wine_bar', name: 'Quầy rượu vang' },
               { type: 'international', name: 'Quốc tế' },
               { type: 'soup', name: 'Súp' },
               { type: 'sushi', name: 'Sushi' },
               { type: 'xinjiang', name: 'Tân Cương' },
               { type: 'barbecue', name: 'Thịt nướng' },
-              { type: 'street_food', name: 'Thức ăn đường phố' },
+              { type: 'street_food_culi', name: 'Thức ăn đường phố' },
               { type: 'good_for_health', name: 'Tốt cho sức khỏe' },
               { type: 'vietnamese_food', name: 'Món Việt' },
               { type: 'america', name: 'Châu Mỹ' },
@@ -177,12 +177,12 @@ const FormFoodDetail = () => {
               { type: 'chinese_food', name: 'Món Trung Hoa' },
               { type: 'singapore', name: 'Singapore' },
               { type: 'taiwanese', name: 'Đài Loan' }
-            ].map((item) => (
-              <Col key={item.type} md='3'>
+            ].map((culinaryStyle, index) => (
+              <Col key={index} md='3'>
                 <Form.Check // prettier-ignore
                   type='checkbox'
-                  id={`${item.type}`}
-                  label={`${item.name}`}
+                  id={`${culinaryStyle.type}`}
+                  label={`${culinaryStyle.name}`}
                   name='culinary_style'
                 />
               </Col>
@@ -220,9 +220,9 @@ const FormFoodDetail = () => {
               [
                 { type: 'all_holiday', name: 'Các ngày nghỉ trong năm' },
                 { type: 'no_holiday', name: 'Không nghỉ lễ' }
-              ].map((item) => (
-                <option value={item.type} key={item.type}>
-                  {item.name}
+              ].map((holiday) => (
+                <option value={holiday.type} key={holiday.type}>
+                  {holiday.name}
                 </option>
               ))
             ]}

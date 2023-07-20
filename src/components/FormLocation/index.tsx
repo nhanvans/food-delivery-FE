@@ -1,10 +1,13 @@
 import React from 'react'
 import { Col, Form, Row } from 'react-bootstrap'
 import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet'
+import { Country, State, City } from 'country-state-city'
 import 'leaflet/dist/leaflet.css'
 import './FormLocation.scss'
 
 const FormFoodLocation = () => {
+  console.log(Country.getCountryByCode('VN'))
+console.log(City.getCitiesOfState('VN', 'DN'))
   return (
     <>
       <div className='Mymap mb-3'>
@@ -20,7 +23,37 @@ const FormFoodLocation = () => {
           </Marker>
         </MapContainer>
       </div>
-      <Form></Form>
+      <Form>
+        <Row>
+          <Form.Group as={Col} className='mb-3' controlId='foodPlaceForm.ControlInputAddress'>
+            <Form.Label>Địa chỉ</Form.Label>
+            <Form.Control type='text' placeholder='Vui lòng nhập tên địa chỉ' />
+          </Form.Group>
+          <Form.Group as={Col} className='mb-3' controlId='foodPlaceForm.ControlInputCountry'>
+            <Form.Label>Quốc gia</Form.Label>
+            <Form.Control type='text' placeholder='Vui lòng nhập tên quốc gia' />
+          </Form.Group>
+          <Form.Group as={Col} className='mb-3' controlId='foodPlaceForm.ControlInputCity'>
+            <Form.Label>Thành phố</Form.Label>
+            <Form.Control type='text' placeholder='Vui lòng nhập tên thành phố' />
+          </Form.Group>
+        </Row>
+
+        <Row>
+          <Form.Group as={Col} className='mb-3' controlId='foodPlaceForm.ControlInputPostcode'>
+            <Form.Label>Mã bưu điện</Form.Label>
+            <Form.Control type='text' placeholder='Vui lòng nhập mã bưu điện' />
+          </Form.Group>
+          <Form.Group as={Col} className='mb-3' controlId='foodPlaceForm.ControlInputLongitude'>
+            <Form.Label>longitude</Form.Label>
+            <Form.Control type='number' placeholder='Vui lòng nhập longitude' />
+          </Form.Group>
+          <Form.Group as={Col} className='mb-3' controlId='foodPlaceForm.ControlInputLatitude'>
+            <Form.Label>latitude</Form.Label>
+            <Form.Control type='number' placeholder='Vui lòng nhập latitude' />
+          </Form.Group>
+        </Row>
+      </Form>
     </>
   )
 }
